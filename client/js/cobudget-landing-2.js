@@ -1,23 +1,36 @@
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault("counter", 0);
-
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get("counter");
-    }
+  
+  // jQuery to collapse the navbar on scroll
+  $(window).scroll(function() {
+      if ($(".navbar").offset().top > 50) {
+          $(".navbar-fixed-top").addClass("top-nav-collapse");
+      } else {
+          $(".navbar-fixed-top").removeClass("top-nav-collapse");
+      }
   });
 
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set("counter", Session.get("counter") + 1);
-    }
+  // jQuery for page scrolling feature - requires jQuery Easing plugin
+  $(function() {
+      $('a.page-scroll').bind('click', function(event) {
+          var $anchor = $(this);
+          $('html, body, .page').stop().animate({
+              scrollTop: $($anchor.attr('href')).offset().top
+          }, 1500, 'easeInOutExpo');
+          event.preventDefault();
+      });
   });
-}
 
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
+  // Closes the Responsive Menu on Menu Item Click
+  $('.navbar-collapse ul li a').click(function() {
+      $('.navbar-toggle:visible').click();
   });
+
+
+
+
+  if (Meteor.isServer) {
+    Meteor.startup(function () {
+      // code to run on server at startup
+    });
+  }
 }
