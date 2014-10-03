@@ -30,6 +30,19 @@ body {
  
 }
 
+.nav-invite-button {
+  margin-top: 0px !important;
+  height: 50px;
+  border-style: none;
+  background: none;
+  border: none;
+  outline:none;
+}
+
+.nav-invite-button:hover {
+  background: #6691d0;
+  color: whitesmoke;
+}
 
 
 
@@ -180,14 +193,24 @@ body {
 /* STORY SECTION
 -------------------------------------------------- */
 
+.story {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
 .story-paragraph {
   padding-top: 20px;
   max-width: 500px;
   margin: auto;
 }
 
+
 /* FOOTER SECTION
 -------------------------------------------------- */
+
+.footer {
+  padding-bottom: 80px;
+}
 
 .footer-title {
   margin-bottom: 25px;
@@ -292,7 +315,77 @@ body {
   }
 }
 
-
+/*TINY MOBILE*/
+@media (max-width: 400px) { 
+  .intro {
+    padding-top: 130px;
+    padding-bottom: 40px;
+  }
+  
+  .intro-text {
+    font-size: 25px;
+  }
+  
+  .brand-heading {
+    display: none;
+  }
+  
+  .triplet-container h1 {
+    margin-bottom: 10px;
+  }
+  
+  .triplet-item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .featurette-image {
+    height: 250px;
+    width: 250px;
+  }
+  
+  .featurette-title {
+    padding-bottom: 30px;
+  }
+  
+  .why {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  hr {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+  }
+  
+  .quote {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  
+  .quote h3 {
+    font-size: 20px;
+  }
+  
+  .story {
+    padding: 0px 20px 0px 20px;
+  }
+  
+  .footer {
+    padding: 0px 20px 0px 20px;
+  }
+  
+  .footer h1 {
+    font-size: 30px;
+  }
+  
+  .footer-paragraph {
+    font-size: 16px;
+  }
+  
+}
 
 /* COMPONENTS CSS
 -------------------------------------------------- */
