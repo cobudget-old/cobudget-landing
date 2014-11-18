@@ -182,9 +182,19 @@ livereload = (cb) ->
 
 gulp.task('livereload', livereload)
 
+#
+# gh-pages
+#
+deploy = require('gulp-gh-pages')
+
+gulp.task 'ghpages', ->
+  gulp.src('build/**/*')
+    .pipe(deploy())
+
 # prod tasks
 gulp.task('build', ['js-build', 'css-build', 'html-build', 'assets-build'])
 gulp.task('start', ['build', 'server'])
+gulp.task('deploy', ['build', 'ghpages'])
 
 # dev tasks
 gulp.task('watch', ['js-watch', 'css-watch', 'html-watch', 'assets-watch'])
