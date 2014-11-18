@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/derekrazo/cobudget-landing",
   "browserify": {
-    "transforms": [
+    "transform": [
       "coffeeify"
     ]
   },
