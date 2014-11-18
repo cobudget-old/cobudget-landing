@@ -93,22 +93,6 @@ gulp.task 'js-watch', js(true)
 filter = require('gulp-filter')
 renderbars = require('gulp-renderbars')
 
-#html = (isWatch) ->
-#  glob = "src/html/**/*"
-#  ->
-#    gulp.src(glob)
-#      .pipe(if isWatch then watch(glob) else util.noop())
-#      .pipe(plumber({ errorHandler }))
-#      .pipe(renderbars({
-#        data: require('./src/index.coffee'),
-#      }))
-#      .pipe(gulp.dest('build'))
-#      .pipe(if lr then require('gulp-livereload')(lr) else util.noop())
-#
-#gulp.task 'html-build', html(false)
-#gulp.task 'html-watch', html(true)
-
-
 html = ->
   gulp.src("src/html/**/*")
     .pipe(plumber(
