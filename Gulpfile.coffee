@@ -4,6 +4,8 @@ buffer = require('vinyl-buffer')
 util = require('gulp-util')
 plumber = require('gulp-plumber')
 sourcemaps = require('gulp-sourcemaps')
+filter = require('gulp-filter')
+newer = require('gulp-newer')
 extend = require('xtend')
 _ = require('lodash')
 
@@ -114,6 +116,9 @@ gulp.task 'html-watch', ['html-build'], ->
 #
 # assets
 #
+imagemin = require('gulp-imagemin')
+pngquant = require('imagemin-pngquant')
+
 assetPaths = {
   "src/assets/**/*": "build"
   "node_modules/font-awesome/fonts/*": "build/fonts"
@@ -122,15 +127,24 @@ assetPaths = {
 
 assets = (isWatch) ->
   ->
+    imgFilter = filter("*.{png,gif,jpg,jpeg,svg}")
+
     _.each assetPaths, (to, from) ->
       gulp.src(from)
         .pipe(if isWatch then require('gulp-watch')(from) else util.noop())
+        .pipe(newer(to))
+        # minify images
+        .pipe(imgFilter)
+        .pipe(imagemin(
+          use: [pngquant()]
+        ))
+        .pipe(imgFilter.restore())
+        # end images minify
         .pipe(gulp.dest(to))
         .pipe(if lr then require('gulp-livereload')(lr) else util.noop())
 
 gulp.task 'assets-build', assets(false)
 gulp.task 'assets-watch', assets(true)
-
 
 #
 # server
