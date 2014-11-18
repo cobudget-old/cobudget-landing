@@ -2,7 +2,7 @@
 -------------------------------------------------- */
 body {
   padding-bottom: 40px;
-  color: #5a5a5a;
+  font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -49,11 +49,20 @@ body {
 /* CUSTOMIZE THE INTRO SECTIONS
 -------------------------------------------------- */
 .intro {
-	padding-top: 250px;
+	padding-top: 140px;
 	padding-bottom: 200px;
+  padding-left: 40px;
 	margin: 0 auto;
 	display: block;
-	text-align: center;
+	text-align: left;
+  z-index: 1;
+
+  /* will be "on top", if browser supports it */
+  background-image: 
+    linear-gradient(
+      to right,
+      #5cc3c4, rgba(0,0,0,0)
+    );
   
   /*
   background-image: url(../img/city2.jpg);
@@ -65,6 +74,22 @@ body {
   
 }
 
+.intro .bg-image {
+  float: right;
+  position: absolute;
+  top: 0px;
+  left: 200px;
+  height: 700px;
+  max-width: 100%;
+  z-index: -1;
+}
+
+.intro .logo {
+  height: 120px;
+  width: 400px;
+  margin-left: -12px;
+}
+
 .title {
 	max-width: 100%;
 	padding-left: 40px;
@@ -72,11 +97,20 @@ body {
 }
 
 .brand-heading {
-  font-size: 40px;
+  font-size: 2.5em;
 }
 
 .intro-text {
-  font-size: 30px;
+  font-size: 1.5em;
+  padding-top: 20px;
+  max-width: 50%;
+}
+
+.intro input {
+  float: left;
+  margin-top: 40px;
+  height: 50px;
+  width: 320px;
 }
 
 
@@ -84,13 +118,12 @@ body {
   margin-top: 20px;
 }
 
-/* MARKETING TRIPLET CONTENT
+/* HOW IT WORKS TRIPLET CONTENT
 -------------------------------------------------- */
 
 /* Pad the edges of the mobile views a bit */
 .marketing {
-  padding-left: 15px;
-  padding-right: 15px;
+  
 }
 
 /* Center align the text within the three columns below the carousel */
@@ -104,34 +137,97 @@ body {
 	width: 140px;
 }
 .marketing h2 {
-  font-weight: normal;
+  font-weight: 400;
+  color: coral;
+  font-size: 25px;
+  margin-top: 35px;
 }
-.marketing .col-lg-4 p {
-  margin-left: 10px;
-  margin-right: 10px;
+.marketing p {
+  margin-top: 25px;
 }
 
 .triplet-text {
-  width: 200px;
   margin: auto;
+}
+
+.triplet-container {
+  margin-bottom: 100px;
+  margin-top: 100px;
 }
 
 .triplet-container h1 {
   text-align: center;
-  margin-bottom: 55px;
+  margin-bottom: 75px;
   margin-top: -10px;
+  font-size: 30px;
+  font-weight: 300;
 }
 
-/* IPAD
+.triplet-container p {
+  color: #313f3f;
+}
+
+.triplet-container hr{
+  margin-top: 65px;
+}
+
+
+
+
+/* IPAD SECTION
 -------------------------------------------------- */
 
-.ipad-image {
-  height: 75%;
-  width: 75%;
-  margin-top: 60px;
+.ipad-section {
+  background-color: #273a40;
+  margin-right: 0px;
+  margin-left: 0px;
+  max-height: 700px;
+  float: left;
 }
 
+.ipad-text {
+  float: left;
+  padding-left: 60px;
+  margin-top: 6%;
+  color: #55c0c1
+}
 
+.ipad-text h1 {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.ipad-text p {
+  color: white;
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.ipad-text h2 {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: coral;
+  margin-top: 45%;
+  margin-bottom: 0px;
+}
+
+.ipad-container {
+  margin-top: 40px;
+  margin-bottom: 75px;
+}
+
+.ipad-image {
+  height: 70%;
+  width: 70%;
+  min-width: 600px;
+  max-width: 800px;
+  position: relative;
+  right: -200px;
+  bottom: 500px;
+  overflow: hidden;
+}
 
 /* WHY COBUDGET SECTION CONTENT
 -------------------------------------------------- */
@@ -140,6 +236,7 @@ body {
 	display: block;
   max-width: 400px;
 }
+
 
 
 /* Featurettes
@@ -407,8 +504,9 @@ body {
 .btn-circle:hover,
 .btn-circle:focus {
     outline: 0;
-    color: white;
-    background: #6691d0;
+    color: coral;
+    background: white;
+    border: 2px solid coral;
 }
 
 .btn-circle i.animated {
