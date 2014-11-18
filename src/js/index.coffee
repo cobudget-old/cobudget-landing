@@ -1,4 +1,4 @@
-global.jQuery = require('jquery')
+$ = global.jQuery = require('jquery')
 require('bootstrap')
 
 $('a[href^="#"]').on 'click', (e) ->
@@ -6,6 +6,6 @@ $('a[href^="#"]').on 'click', (e) ->
 
   $(this).fadeOut(1000)
 
-  $("body, html").animate(
+  $("body, html").animate({
     scrollTop: $($(this).attr('href')).offset().top
-  , 900)
+  }, 900)
