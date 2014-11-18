@@ -35,3 +35,9 @@ will build once and deploy to gh-pages
 ```
 npm run deploy
 ```
+
+for a production deploy, add the `NODE_ENV=production` environment variable:
+
+```
+NODE_ENV=production npm run deploy
+```

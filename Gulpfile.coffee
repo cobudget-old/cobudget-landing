@@ -32,7 +32,9 @@ css = ->
         # https://github.com/floatdrop/gulp-plumber/issues/8
         this.emit('end')
     ))
-    .pipe(myth())
+    .pipe(myth(
+      compress: nodeEnv == 'production'
+    ))
     .pipe(sourcemaps.init(loadMaps: true))
     .pipe(sourcemaps.write('../maps'))
     .pipe(gulp.dest('build/css'))
