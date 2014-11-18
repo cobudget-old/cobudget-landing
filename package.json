@@ -42,6 +42,7 @@
     "gulp-myth": "^1.0.1",
     "gulp-newer": "^0.4.0",
     "gulp-plumber": "^0.6.6",
+    "gulp-prettify": "^0.3.0",
     "gulp-renderbars": "git://github.com/openappjs/gulp-renderbars",
     "gulp-sourcemaps": "^1.2.8",
     "gulp-uglify": "^1.0.1",

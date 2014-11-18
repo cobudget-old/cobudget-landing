@@ -94,6 +94,7 @@ gulp.task 'js-watch', js(true)
 #
 filter = require('gulp-filter')
 renderbars = require('gulp-renderbars')
+prettify = require('gulp-prettify')
 
 html = ->
   gulp.src("src/html/**/*")
@@ -106,6 +107,7 @@ html = ->
     .pipe(renderbars({
       data: require('./src/index.coffee'),
     }))
+    .pipe(prettify(indent_size: 2))
     .pipe(gulp.dest('build'))
     .pipe(if lr then require('gulp-livereload')(lr) else util.noop())
 
