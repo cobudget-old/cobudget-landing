@@ -1,0 +1,56 @@
+{
+  "name": "cobudget-landing",
+  "version": "0.0.0",
+  "description": "landing page for the cobudget app",
+  "browser": "./src/js/index.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp start",
+    "develop": "gulp develop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/derekrazo/cobudget-landing.git"
+  },
+  "author": "",
+  "license": "AGPLv3",
+  "bugs": {
+    "url": "https://github.com/derekrazo/cobudget-landing/issues"
+  },
+  "homepage": "https://github.com/derekrazo/cobudget-landing",
+  "browserify": {
+    "transforms": [
+      "coffeeify"
+    ]
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.1",
+    "browserify": "^6.3.2",
+    "bundle-collapser": "^1.1.0",
+    "coffee-script": "^1.8.0",
+    "coffeeify": "^1.0.0",
+    "connect": "^3.3.3",
+    "ecstatic": "^0.5.6",
+    "font-awesome": "^4.2.0",
+    "gulp": "^3.8.10",
+    "gulp-connect": "^2.2.0",
+    "gulp-myth": "^1.0.1",
+    "gulp-plumber": "^0.6.6",
+    "gulp-renderbars": "git://github.com/openappjs/gulp-renderbars",
+    "gulp-sourcemaps": "^1.2.8",
+    "gulp-uglify": "^1.0.1",
+    "gulp-util": "^3.0.1",
+    "jquery": "^2.1.1",
+    "lodash": "^2.4.1",
+    "mold-source-map": "^0.3.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.0.0",
+    "xtend": "^4.0.0"
+  },
+  "devDependencies": {
+    "connect-livereload": "^0.5.0",
+    "gulp-watch": "^1.2.0",
+    "tiny-lr": "^0.1.4",
+    "watchify": "^2.1.1"
+  }
+}
