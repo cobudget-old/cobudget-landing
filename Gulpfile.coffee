@@ -24,6 +24,7 @@ errorHandler = (err) ->
 # css
 #
 myth = require('gulp-myth')
+cssmin = require('gulp-minify-css')
 
 css = ->
 
@@ -34,10 +35,9 @@ css = ->
         # https://github.com/floatdrop/gulp-plumber/issues/8
         this.emit('end')
     ))
-    .pipe(myth(
-      compress: nodeEnv == 'production'
-    ))
+    .pipe(myth())
     .pipe(sourcemaps.init(loadMaps: true))
+    .pipe(if nodeEnv == 'production' then cssmin() else util.noop())
     .pipe(sourcemaps.write('../maps'))
     .pipe(gulp.dest('build/css'))
     .pipe(if lr then require('gulp-livereload')(lr) else util.noop())
