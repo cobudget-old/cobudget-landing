@@ -182,6 +182,7 @@ body {
   margin-left: 0px;
   max-height: 700px;
   float: left;
+  overflow: hidden;
 }
 
 .ipad-text {
@@ -225,8 +226,8 @@ body {
   position: relative;
   right: -200px;
   bottom: 500px;
-  overflow: hidden;
 }
+
 
 /* WHY COBUDGET SECTION CONTENT
 -------------------------------------------------- */
@@ -385,6 +386,8 @@ body {
   background-color: #273a40;
   color: white;
   height: 55px; 
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .footer-footer p {
