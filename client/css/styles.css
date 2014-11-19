@@ -308,8 +308,8 @@ body {
   font-size: 1.2em;
 }
 
-.story .right-side {
-
+.story .right-side img {
+  max-width: 550px;
 }
 
 
@@ -396,6 +396,47 @@ body {
   line-height: 60px;
   height: 20px;
 }
+
+@media (max-width: 990px) {
+  .footer {
+    text-align: center;
+    float: center;
+  }
+
+  .footer-logo {
+    margin-left: 0px;
+  }
+
+  .footer-left {
+    width: 100% !important;
+  }
+
+  .footer h1 {
+    clear: left;
+    float: none !important;
+    margin-left: 0px;
+  }
+
+  .footer-paragraph {
+    float: none !important;
+    margin-left: auto; 
+    margin-right: auto;
+  }
+
+  .footer .sign-up {
+    float: none !important;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 30px;
+  }
+
+}
+
+
+
+
+
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
