@@ -187,11 +187,11 @@ gulp.task('livereload', livereload)
 #
 # gh-pages
 #
-deploy = require('gulp-gh-pages')
 
 gulp.task 'ghpages', ->
+  ghpages = require('gulp-gh-pages')
   gulp.src('build/**/*')
-    .pipe(deploy())
+    .pipe(ghpages())
 
 # prod tasks
 gulp.task('build', ['js-build', 'css-build', 'html-build', 'assets-build'])
