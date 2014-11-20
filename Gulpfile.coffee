@@ -185,18 +185,27 @@ livereload = (cb) ->
 gulp.task('livereload', livereload)
 
 #
-# gh-pages
+# deploy
 #
 
-gulp.task 'ghpages', ->
-  ghpages = require('gulp-gh-pages')
+gulp.task 'branch', ->
+  branch = require('gulp-build-branch')
+  branch(
+    folder: 'build'
+  )
+
+gulp.task 'dokku', ->
+  deploy = require('gulp-gh-pages')
   gulp.src('build/**/*', dot: true)
-    .pipe(ghpages())
+    .pipe(deploy("dokku@next.cobudget.co:app",
+      origin: 'deploy'
+      branch: 'awesome'
+    ))
 
 # prod tasks
 gulp.task('build', ['js-build', 'css-build', 'html-build', 'assets-build'])
 gulp.task('start', ['build', 'server'])
-gulp.task('deploy', ['build', 'ghpages'])
+gulp.task('publish', ['build', 'branch'])
 
 # dev tasks
 gulp.task('watch', ['js-watch', 'css-watch', 'html-watch', 'assets-watch'])
