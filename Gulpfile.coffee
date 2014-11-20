@@ -132,15 +132,15 @@ assets = (isWatch) ->
     imgFilter = filter("*.{png,gif,jpg,jpeg,svg}")
 
     _.each assetPaths, (to, from) ->
-      gulp.src(from)
+      gulp.src(from, dot: true)
         .pipe(if isWatch then require('gulp-watch')(from) else util.noop())
         .pipe(newer(to))
         # minify images
-        .pipe(imgFilter)
-        .pipe(imagemin(
-          use: [pngquant()]
-        ))
-        .pipe(imgFilter.restore())
+        #.pipe(imgFilter)
+        #.pipe(imagemin(
+        #  use: [pngquant()]
+        #))
+        #.pipe(imgFilter.restore())
         # end images minify
         .pipe(gulp.dest(to))
         .pipe(if lr then require('gulp-livereload')(lr) else util.noop())
@@ -190,7 +190,7 @@ gulp.task('livereload', livereload)
 
 gulp.task 'ghpages', ->
   ghpages = require('gulp-gh-pages')
-  gulp.src('build/**/*')
+  gulp.src('build/**/*', dot: true)
     .pipe(ghpages())
 
 # prod tasks
