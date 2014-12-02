@@ -28,15 +28,17 @@ will build on watch and start a livereload server
 npm run develop
 ```
 
-### deploy
+### stage
 
 will build once and deploy to gh-pages
 
 ```
-npm run deploy
+NODE_ENV=production npm run stage
 ```
 
-for a production deploy, add the `NODE_ENV=production` environment variable:
+### deploy
+
+will build once and deploy to dokku
 
 ```
 NODE_ENV=production npm run deploy
