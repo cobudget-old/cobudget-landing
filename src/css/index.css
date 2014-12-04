@@ -11,7 +11,6 @@ a:hover {
   text-decoration: none;
 }
 
-
 /* CUSTOMIZE THE NAVBAR OLD
 -------------------------------------------------- */
 
@@ -49,8 +48,6 @@ a:hover {
   color: whitesmoke;
 }
 
-
-
 /* CUSTOMIZE THE INTRO SECTIONS
 -------------------------------------------------- */
 .intro {
@@ -68,14 +65,6 @@ a:hover {
       to right,
       #5cc3c4, rgba(0,0,0,0)
     );
-  
-  /*
-  background-image: url(../img/city2.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 0px -110px; 
-  background-size: 100% 100%;
-  */
   
 }
 
@@ -176,9 +165,6 @@ a:hover {
   margin-top: 65px;
 }
 
-
-
-
 /* IPAD SECTION
 -------------------------------------------------- */
 
@@ -255,68 +241,7 @@ a:hover {
     float: left;
     overflow: hidden;
   }
-
 }
-
-
-
-
-/* WHY COBUDGET SECTION CONTENT
--------------------------------------------------- */
-.why-paragraph {
-	margin: 0 auto;
-	display: block;
-  max-width: 400px;
-}
-
-
-
-/* Featurettes
-------------------------- */
-
-
-.featurette-title {
-  max-width: 580px;
-  margin: auto;
-  padding-bottom: 80px;
-}
-
-.featurette-divider {
-}
-
-.featurette {
-  overflow: hidden; /* Vertically center images part 2: clear their floats. */
-}
-
-.crop {
-  
-}
-
-.featurette-image {
-  height: 350px;
-  width: 350px;
-}
-
-/* Give some space on the sides of the floated elements so text doesn't run right into it. */
-.featurette-image.pull-left {
-  margin-right: 40px;
-}
-.featurette-image.pull-right {
-  margin-left: 40px;
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-size: 40px;
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
-.featurette-heading .text-muted {
-  font-weight: 300;
-}
-
 
 /* STORY SECTION
 -------------------------------------------------- */
@@ -343,8 +268,6 @@ a:hover {
 .story .right-side img {
   max-width: 550px;
 }
-
-
 
 /* FOOTER SECTION
 -------------------------------------------------- */
@@ -460,14 +383,7 @@ a:hover {
     margin-right: auto;
     margin-top: 30px;
   }
-
 }
-
-
-
-
-
-
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -492,58 +408,6 @@ a:hover {
   
   .navbar.container button {
     color: black;
-  }
-
-}
-
-@media (max-width: 653px) {
-  .featurette .text-muted {
-    font-size: 30px;
-  }
-  
-  .featurette p {
-  
-  }
-}
-
-@media (max-width: 600px) {
-  
-  .featurette {
-    padding-top: 0px;
-  }
-  
-  .featurette-image {
-    max-height: 350px;
-    max-width: 350px;
-  }
-
-  /* Give some space on the sides of the floated elements so text doesn't run right into it. */
-  .featurette-image.pull-left {
-    float: none !important;
-    margin: auto;
-  }
-  .featurette-image.pull-right {
-    float: none !important;
-    margin: auto;
-  }
-
-  /* Thin out the marketing headings */
-  .featurette-heading {
-    font-size: 40px;
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: -1px;
-    text-align: center;
-  }
-
-  .featurette-heading .text-muted {
-    font-weight: 300;
-  }
-  
-  .featurette-text{
-    width: 100%;
-    margin: auto 0;
-    text-align: center;
   }
 }
 
@@ -571,22 +435,6 @@ a:hover {
     padding-bottom: 30px;
   }
   
-  .featurette-image {
-    height: 250px;
-    width: 250px;
-  }
-  
-  .featurette-title {
-    padding-bottom: 30px;
-  }
-  
-  .why {
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  
   hr {
     margin-top: 30px !important;
     margin-bottom: 30px !important;
@@ -595,10 +443,6 @@ a:hover {
   .quote {
     padding-left: 25px;
     padding-right: 25px;
-  }
-  
-  .quote h3 {
-    font-size: 20px;
   }
   
   .story {
@@ -645,19 +489,11 @@ a:hover {
 }
 
 .btn-circle i.animated {
-    -webkit-transition-property: -webkit-transform;
-    -webkit-transition-duration: 1s;
-    -moz-transition-property: -moz-transform;
-    -moz-transition-duration: 1s;
+  transition-duration: 1s;
 }
 
 .btn-circle:hover i.animated {
-    -webkit-animation-name: pulse;
-    -moz-animation-name: pulse;
-    -webkit-animation-duration: 1.5s;
-    -moz-animation-duration: 1.5s;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
