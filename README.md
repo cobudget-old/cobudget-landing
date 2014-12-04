@@ -38,6 +38,12 @@ NODE_ENV=production npm run stage
 
 ### deploy
 
+add `deploy` remote repo
+
+```
+git remote add deploy dokku@next.cobudget.co:landing
+```
+
 will build once and deploy to dokku
 
 ```
