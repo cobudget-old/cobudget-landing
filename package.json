@@ -9,8 +9,8 @@
     "develop": "gulp develop",
     "build": "gulp build",
     "publish": "gulp publish",
-    "stage": "gulp publish && git push origin gh-pages -f",
-    "deploy": "gulp publish && git push deploy gh-pages:master -f"
+    "stage": "(export NODE_ENV=production; gulp publish && git push origin gh-pages -f)",
+    "deploy": "(export NODE_ENV=production; gulp publish && git push deploy gh-pages:master -f)"
   },
   "repository": {
     "type": "git",

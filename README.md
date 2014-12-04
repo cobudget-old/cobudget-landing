@@ -33,7 +33,7 @@ npm run develop
 will build once and deploy to gh-pages
 
 ```
-NODE_ENV=production npm run stage
+npm run stage
 ```
 
 ### deploy
@@ -47,5 +47,5 @@ git remote add deploy dokku@next.cobudget.co:landing
 will build once and deploy to dokku
 
 ```
-NODE_ENV=production npm run deploy
+npm run deploy
 ```
