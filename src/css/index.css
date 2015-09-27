@@ -3,12 +3,24 @@
 
 /* BOOTSTRAP 3.x GLOBAL STYLES
 -------------------------------------------------- */
+html, body { overflow-x: hidden; }
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
 
 a:hover {
   text-decoration: none;
+}
+
+.container{
+    width: 100%;
+    padding: 0px;
+  }
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 /* CUSTOMIZE THE NAVBAR OLD
@@ -53,10 +65,9 @@ a:hover {
 .intro {
 	padding-top: 140px;
 	padding-bottom: 200px;
-  padding-left: 40px;
 	margin: 0 auto;
 	display: block;
-	text-align: left;
+	text-align: center;
   z-index: 1;
 
   /* will be "on top", if browser supports it */
@@ -79,14 +90,13 @@ a:hover {
 }
 
 .intro .logo {
-  height: 120px;
-  width: 400px;
-  margin-left: -12px;
+  max-height: 240px;
+  max-width: 800px;
+  position: relative;
 }
 
 .title {
 	max-width: 100%;
-	padding-left: 40px;
 	padding-right: 0px;
 }
 
@@ -101,10 +111,10 @@ a:hover {
 }
 
 .intro input {
-  float: left;
   margin-top: 40px;
   height: 50px;
   width: 320px;
+  margin: 0 auto;
 }
 
 
@@ -185,63 +195,42 @@ a:hover {
 }
 
 .ipad-text h1 {
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 300;
   margin-bottom: 25px;
 }
 
 .ipad-text p {
   color: white;
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: 300;
   margin-top: 10px;
+}
+
+.devices-section {
+  margin-top: 35%;
 }
 
 .ipad-text h2 {
   font-size: 1.3em;
   font-weight: 600;
   color: coral;
-  margin-top: 45%;
   margin-bottom: 0px;
 }
 
-.ipad-container {
-  margin-top: 40px;
-  margin-bottom: 75px;
-}
-
 .ipad-image {
-  /*height: 70%;*/
-  width: 70%;
-  min-width: 600px;
-  max-width: 800px;
+  width: 50%;
   position: relative;
-  right: -200px;
-  bottom: 500px;
+  padding-right: 125px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  max-width: 500px;
 }
 
-@media (min-width: 1287px) {
-
-  .ipad-image {
-    height: 70%;
-    width: 70%;
-    min-width: 600px;
-    max-width: 750px;
-    position: relative;
-    right: -90px;
-    bottom: -50px;
-  }
-
-  .ipad-section {
-    background-color: #273a40;
-    margin-right: 0px;
-    margin-left: 0px;
-    padding-bottom: 100px;
-    max-height: 900px;
-    float: left;
-    overflow: hidden;
-  }
+.devices {
+  max-width: 80px;
 }
+
 
 /* STORY SECTION
 -------------------------------------------------- */
@@ -249,6 +238,8 @@ a:hover {
 .story {
   padding-top: 80px;
   padding-bottom: 80px;
+  text-align: center;
+  position: relative;
 }
 
 .story-title {
@@ -260,13 +251,17 @@ a:hover {
 }
 
 .story-paragraph {
-  padding-top: 70px;
+  padding-top: 35px;
   max-width: 500px;
-  font-size: 1.2em;
+  font-size: 1.5em;
+  margin: 0 auto;
 }
 
-.story .right-side img {
+
+.story img {
+  margin: 0 auto;
   max-width: 550px;
+  padding-left: 35px;
 }
 
 /* FOOTER SECTION
@@ -279,11 +274,9 @@ a:hover {
   margin-right: 0px !important;
 }
 
-
 .footer img {
   width: 85%;
   margin-top: 40px;
-  margin-left: -22px;
 }
 
 .footer h1 {
@@ -307,13 +300,12 @@ a:hover {
 }
 
 .sign-up {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .footer .sign-up {
   margin-top: 8%;
   text-align: center;
-  padding-right: 80px;
 }
 
 .sign-up p {
@@ -351,6 +343,15 @@ a:hover {
   height: 20px;
 }
 
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 1050px) {
+  .ideate {
+    margin-left: 15px;
+  }
+}
+
 @media (max-width: 990px) {
   .footer {
     text-align: center;
@@ -385,16 +386,23 @@ a:hover {
   }
 }
 
-/* RESPONSIVE CSS
--------------------------------------------------- */
+@media (min-width: 1287px) {
+
+  .ipad-section {
+    background-color: #273a40;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-bottom: 100px;
+    max-height: 900px;
+    float: left;
+    overflow: hidden;
+  }
+}
 
 @media (min-width: 768px) {
 
   /* Remve the edge padding needed for mobile */
-  .marketing {
-    padding-left: 0;
-    padding-right: 0;
-  }
+  
 
   /* Navbar positioning foo */
   .navbar-wrapper {
@@ -409,21 +417,56 @@ a:hover {
   .navbar.container button {
     color: black;
   }
+
+  .footer {
+    text-align: center;
+    float: center;
+  }
+
+  .footer-logo {
+    margin-left: 0px;
+  }
+
+  .footer-left {
+    width: 100% !important;
+  }
+
+  .footer h1 {
+    clear: left;
+    float: none !important;
+    margin-left: 0px;
+  }
+
+  .footer-paragraph {
+    float: none !important;
+    margin-left: auto; 
+    margin-right: auto;
+  }
+
+  .footer .sign-up {
+    float: none !important;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 30px;
+  }
+
 }
 
-/*TINY MOBILE*/
-@media (max-width: 400px) { 
+/*SMALL MOBILE*/
+@media (max-width: 767px) {
+
   .intro {
     padding-top: 130px;
     padding-bottom: 40px;
   }
+
+  .intro .logo {
+    max-width: 500px;
+    margin: 0 auto;
+  }
   
   .intro-text {
     font-size: 25px;
-  }
-  
-  .brand-heading {
-    display: none;
   }
   
   .triplet-container h1 {
@@ -439,6 +482,25 @@ a:hover {
     margin-top: 30px !important;
     margin-bottom: 30px !important;
   }
+
+
+  .ipad-image {
+    display: none;
+  }
+
+  .ipad-text {
+    text-align: center;
+    padding-left: 0px;
+
+  }
+
+  .ipad-text p {
+    padding: 20px;
+  }
+
+  .devices-section {
+    margin-top: 10%;   
+  }
   
   .quote {
     padding-left: 25px;
@@ -447,6 +509,12 @@ a:hover {
   
   .story {
     padding: 0px 20px 0px 20px;
+    text-align: center;
+  }
+
+  .story-title {
+    text-align: center;
+    margin-top: 45px;
   }
   
   .footer {
@@ -454,7 +522,8 @@ a:hover {
   }
   
   .footer h1 {
-    font-size: 30px;
+    font-size: 20px;
+    margin-top: 15px;
   }
   
   .footer-paragraph {
@@ -462,6 +531,105 @@ a:hover {
   }
   
 }
+
+@media (max-width: 560px) {
+
+  .intro {
+    padding-top: 130px;
+    padding-bottom: 40px;
+  }
+
+  .intro .logo {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .intro h1 {
+    font-size: 190%;
+  }
+
+  .intro input {
+    max-width: 90%;
+  }
+  
+  .triplet-container h1 {
+    margin-bottom: 10px;
+  }
+  
+  .triplet-item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  hr {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+  }
+
+
+  .ipad-image {
+    display: none;
+  }
+
+  .ipad-text {
+    text-align: center;
+    padding-left: 0px;
+
+  }
+
+  .ipad-text p {
+    padding: 20px;
+  }
+
+  .devices-section {
+    margin-top: 10%;   
+  }
+  
+  .quote {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  
+  .story {
+    padding: 0px 20px 0px 20px;
+    text-align: center;
+  }
+
+  .story img {
+    max-width: 100%;
+  }
+
+  .story-paragraph {
+    font-size: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .story-title {
+    text-align: center;
+    margin-top: 45px;
+  }
+  
+  .footer {
+    padding: 0px 20px 0px 20px;
+  }
+
+  .footer img {
+    width: 100%;
+  }
+  
+  .footer h1 {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  
+  .footer-paragraph {
+    font-size: 16px;
+  }
+  
+}
+
+
 
 /* COMPONENTS CSS
 -------------------------------------------------- */

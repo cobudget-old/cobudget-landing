@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Cobudget | People Budget Better, Together."
+  title: "Cobudget | Collaborative Funding"
   description: ""
   site_name: ""
   url: "http://cobudget.co"
